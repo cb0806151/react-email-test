@@ -18,15 +18,16 @@ import * as React from "react";
 const baseUrl = "https://newsletter.sgf.dev/uploads"// "http://localhost:3000/static";
 
 export const SgfDevNightEmail = () => {
-	const eventsTitle = "My Wireless Hacking Toy Box";
-	const eventSpeaker = "Chris Kincaid";
-	const eventSpeakersGroup = "Springfield Devs";
-	const descriptionParagraph1 =
-		"Explore the realm of wireless auditing tools! This session explores popular wireless auditing tools, featuring devices like thumb-drive-sized NICs, external wireless adapters, WiFi Pineapples, Flipper Zero, Pwnagotchi, and custom Arduino-type boards designed for ethical WiFi hacking practice or group games.";
-	const descriptionParagraph2 =
-		"Disclaimer: Ethical hacking only! Unauthorized access or malicious actions towards any wireless network without expressed permissions is illegal and not condoned. The topics covered in this session are intended for entertainment, knowledge reinforcement, and emphasizing the importance of strong wireless security.";
-	const descriptionParagraph3 =
-		"Note: Due to the nature of this kind of event, it will have to be in-person only event (no twitch stream); however, we will be posting a recording of the event in the weeks following.";
+	const eventsTitle = "Lightning Round: a trio of lightning talks"
+	const eventATitle = "Frameworks, Libraries, Code & Corn";
+	const eventASpeaker = "Bud Siebold";
+	const eventADescriptionParagraph1 = "Follow Billy Joe Jim Bob's culinary journey to discover the differences between Frameworks, Libraries, Code & Corn";
+	const eventBTitle = "sgf.dev is hosted in SGF!";
+	const eventBSpeaker = "Ryan De Lap";
+	const eventBDescriptionParagraph1 = "Follow Billy Joe Jim Bob's culinary journey to discover the differences between Frameworks, Libraries, Code & Corn";
+	const eventCTitle = "Software Engineering + Pomodoro = ?";
+	const eventCSpeaker = "Christopher Baunach";
+	const eventCDescriptionParagraph1 = "A lot of us have probably heard of Pomodoro but how does it work in practice? Is it helpful? What are the problems with it? Well I've been practicing it at my job for the last few months and can give some answers to those questions.";
 	const discordLink = "https://discord.com/invite/VNNJwJk";
 	const eventMeetupLink = "https://www.meetup.com/sgfdevs/events/300461471";
 	const developerProfileLink = "https://sgf.dev/register";
@@ -68,25 +69,20 @@ export const SgfDevNightEmail = () => {
 							<Column>
 								<Row style={{ ...noBorder, marginBottom: "10px" }}>
 									<Column style={eventDescription}>
-										<Text style={eventTitle}>{eventsTitle}</Text>
-										<Text style={eventHosts}>Presented by {eventSpeaker}</Text>
-										<Text style={eventGroup}>{eventSpeakersGroup}</Text>
+										<Text style={eventTitle}>{eventATitle}</Text>
+										<Text style={eventHosts}>Presented by {eventASpeaker}</Text>
 										<Text>
-											{descriptionParagraph1}
-											{descriptionParagraph2.length > 0 && (
-												<>
-													<br />
-													<br />
-													{descriptionParagraph2}
-												</>
-											)}
-											{descriptionParagraph3.length > 0 && (
-												<>
-													<br />
-													<br />
-													{descriptionParagraph3}
-												</>
-											)}
+											{eventADescriptionParagraph1}
+										</Text>
+										<Text style={eventTitle}>{eventBTitle}</Text>
+										<Text style={eventHosts}>Presented by {eventBSpeaker}</Text>
+										<Text>
+											{eventBDescriptionParagraph1}
+										</Text>
+										<Text style={eventTitle}>{eventCTitle}</Text>
+										<Text style={eventHosts}>Presented by {eventCSpeaker}</Text>
+										<Text>
+											{eventCDescriptionParagraph1}
 										</Text>
 										<Text style={italics}>
 											For dev night agenda, parking map, etc check out the
