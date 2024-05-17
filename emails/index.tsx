@@ -19,17 +19,18 @@ const baseUrl = "https://newsletter.sgf.dev/uploads"// "http://localhost:3000/st
 
 export const SgfDevNightEmail = () => {
 	const eventsTitle = "Lightning Round: a trio of lightning talks"
+	const eventDate = "Wednesday, June 5th at 6:00 PM"
 	const eventATitle = "Frameworks, Libraries, Code & Corn";
 	const eventASpeaker = "Bud Siebold";
 	const eventADescriptionParagraph1 = "Follow Billy Joe Jim Bob's culinary journey to discover the differences between Frameworks, Libraries, Code & Corn";
 	const eventBTitle = "sgf.dev is hosted in SGF!";
 	const eventBSpeaker = "Ryan De Lap";
-	const eventBDescriptionParagraph1 = "Follow Billy Joe Jim Bob's culinary journey to discover the differences between Frameworks, Libraries, Code & Corn";
+	const eventBDescriptionParagraph1 = "Migrating to metal, the story of provisioning new hardware for Springfield Developers to save us time and money on our hosting bill. We discuss the logistics of building and deploying a new server in the Springfield Underground and what lessons were learned along the way.";
 	const eventCTitle = "Software Engineering + Pomodoro = ?";
 	const eventCSpeaker = "Christopher Baunach";
 	const eventCDescriptionParagraph1 = "A lot of us have probably heard of Pomodoro but how does it work in practice? Is it helpful? What are the problems with it? Well I've been practicing it at my job for the last few months and can give some answers to those questions.";
 	const discordLink = "https://discord.com/invite/VNNJwJk";
-	const eventMeetupLink = "https://www.meetup.com/sgfdevs/events/300461471";
+	const eventMeetupLink = "https://www.meetup.com/sgfdevs/events/301072755/";
 	const developerProfileLink = "https://sgf.dev/register";
 	const twitchLink = "https://www.twitch.tv/sgfdevs";
 
@@ -50,7 +51,7 @@ export const SgfDevNightEmail = () => {
 									Dev Night: In-Person + Online
 								</Heading>
 								<Heading style={emailHeadingText}>
-									Wednesday, May 1st at 6:00 PM
+									{eventDate}
 								</Heading>
 								<div style={centered}>
 									<Button style={buttonStyle} href={eventMeetupLink}>
@@ -69,6 +70,8 @@ export const SgfDevNightEmail = () => {
 							<Column>
 								<Row style={{ ...noBorder, marginBottom: "10px" }}>
 									<Column style={eventDescription}>
+										<Text style={eventTitle}>{eventsTitle}</Text>
+										<hr/>
 										<Text style={eventTitle}>{eventATitle}</Text>
 										<Text style={eventHosts}>Presented by {eventASpeaker}</Text>
 										<Text>
